@@ -6,6 +6,8 @@ import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
+import '../../static/fonts/Arapey-Regular.ttf'
+
 export const IndexPageTemplate = ({
   image,
   title,
@@ -34,15 +36,17 @@ export const IndexPageTemplate = ({
           justifyContent: 'space-around',
           alignItems: 'left',
           flexDirection: 'column',
+          marginRight: '40%',
+          fontFamily: 'Arapey, serif'
         }}
       >
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
+            // boxShadow:
+            //   'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
+            // backgroundColor: 'rgb(255, 68, 0)',
+            color: '#333',
             lineHeight: '1',
             padding: '0.25em',
           }}
@@ -52,16 +56,24 @@ export const IndexPageTemplate = ({
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
+            // boxShadow:
+            //   'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
+            // backgroundColor: 'rgb(255, 68, 0)',
+            color: '#333',
             lineHeight: '1',
-            padding: '0.25em',
+            padding: '1.25em',
+            fontStyle: 'italic'
           }}
         >
           {subheading}
         </h3>
+        <div className="columns">
+          <div style={{ padding: '1.75em' }} className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+            <Link className="btn" style={{ background: 'transparent', color: '#333', border: 'none', boxShadow: 'inset 0 0 0 2px #333' }} to="/showcase">
+              SHOWCASE
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
     <section className="section section--gradient">
@@ -70,7 +82,7 @@ export const IndexPageTemplate = ({
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
-                <div className="content">
+                {/* <div className="content">
                   <div className="tile">
                     <h1 className="title">{mainpitch.title}</h1>
                   </div>
@@ -85,16 +97,9 @@ export const IndexPageTemplate = ({
                     </h3>
                     <p>{description}</p>
                   </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
+                </div> */}
+                {/* <Features gridItems={intro.blurbs} /> */}
+                {/* <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
                     Latest stories
                   </h3>
@@ -104,7 +109,7 @@ export const IndexPageTemplate = ({
                       Read more
                     </Link>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -8,8 +8,8 @@ import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const ProductPageTemplate = ({
-  image,
-  title,
+  // image,
+  // title,
   heading,
   description,
   intro,
@@ -19,7 +19,7 @@ export const ProductPageTemplate = ({
   pricing,
 }) => (
   <div className="content">
-    <div
+    {/* <div
       className="full-width-image-container margin-top-0"
       style={{
         backgroundImage: `url(${
@@ -38,7 +38,7 @@ export const ProductPageTemplate = ({
       >
         {title}
       </h2>
-    </div>
+    </div> */}
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -51,15 +51,15 @@ export const ProductPageTemplate = ({
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <Features gridItems={intro.blurbs} />
-              <div className="columns">
+              {/* <div className="columns">
                 <div className="column is-7">
                   <h3 className="has-text-weight-semibold is-size-3">
                     {main.heading}
                   </h3>
                   <p>{main.description}</p>
                 </div>
-              </div>
-              <div className="tile is-ancestor">
+              </div> */}
+              {/* <div className="tile is-ancestor">
                 <div className="tile is-vertical">
                   <div className="tile">
                     <div className="tile is-parent is-vertical">
@@ -79,8 +79,8 @@ export const ProductPageTemplate = ({
                     </article>
                   </div>
                 </div>
-              </div>
-              <Testimonials testimonials={testimonials} />
+              </div> */}
+              {/* <Testimonials testimonials={testimonials} />
               <div
                 className="full-width-image-container"
                 style={{
@@ -95,7 +95,7 @@ export const ProductPageTemplate = ({
                 {pricing.heading}
               </h2>
               <p className="is-size-5">{pricing.description}</p>
-              <Pricing data={pricing.plans} />
+              <Pricing data={pricing.plans} /> */}
             </div>
           </div>
         </div>
@@ -186,61 +186,61 @@ export const productPageQuery = graphql`
           heading
           description
         }
-        main {
-          heading
-          description
-          image1 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image2 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-        testimonials {
-          author
-          quote
-        }
-        full_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        pricing {
-          heading
-          description
-          plans {
-            description
-            items
-            plan
-            price
-          }
-        }
+        # main {
+        #   heading
+        #   description
+        #   image1 {
+        #     alt
+        #     image {
+        #       childImageSharp {
+        #         fluid(maxWidth: 526, quality: 92) {
+        #           ...GatsbyImageSharpFluid
+        #         }
+        #       }
+        #     }
+        #   }
+        #   image2 {
+        #     alt
+        #     image {
+        #       childImageSharp {
+        #         fluid(maxWidth: 526, quality: 92) {
+        #           ...GatsbyImageSharpFluid
+        #         }
+        #       }
+        #     }
+        #   }
+        #   image3 {
+        #     alt
+        #     image {
+        #       childImageSharp {
+        #         fluid(maxWidth: 1075, quality: 72) {
+        #           ...GatsbyImageSharpFluid
+        #         }
+        #       }
+        #     }
+        #   }
+        # }
+        # testimonials {
+        #   author
+        #   quote
+        # }
+        # full_image {
+        #   childImageSharp {
+        #     fluid(maxWidth: 2048, quality: 100) {
+        #       ...GatsbyImageSharpFluid
+        #     }
+        #   }
+        # }
+        # pricing {
+        #   heading
+        #   description
+        #   plans {
+        #     description
+        #     items
+        #     plan
+        #     price
+        #   }
+        # }
       }
     }
   }
