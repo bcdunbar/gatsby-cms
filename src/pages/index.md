@@ -3,7 +3,7 @@ templateKey: index-page
 title: Branden Dunbar
 image: /img/ceystalhorizon.png
 heading: 
-subheading: Software Eng | Multi-Cloud | SRE | Data Science 
+subheading: A Full-Stack Software Developer with experience in multiple industries, tech-startups, and enterprises. Focused on the architecture, design and build process of data-driven applications. Experienced in containerization, orchestration, site reliability engineering, and multi-cloud.
 mainpitch:
   title: >
   description: >
